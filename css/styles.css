@@ -52,6 +52,10 @@ input {
   font-family: inherit;
 }
 
+textarea{
+  resize: none;
+}
+
 .container {
   max-width: 1158px;
   padding-left: 15px;
@@ -597,7 +601,7 @@ input {
   justify-content: center;
   align-items: center;
   opacity: 9;
-  pointer-events:none;
+  pointer-events:non;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -607,9 +611,6 @@ input {
   background: #fcfcfc;
   overflow-y: auto;
   position: absolute; 
-  top: 50%; 
-  height: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .modal-overlay.is-open {
@@ -660,7 +661,7 @@ input {
   text-align: center;
   color: #2e2f42;
   padding-bottom: 16px;
-  padding-top: 24px;
+  padding-top: 72px;
 }
 
 .feedback-subtitle {
@@ -683,6 +684,16 @@ input {
 
 .textarea {
   min-height: 120px;
+}
+
+.textarea::placeholder{
+  padding-top: 8px;
+  padding-left: 16px;
+  font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16667;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
 }
 
 .feedback-button {
@@ -711,12 +722,6 @@ input {
   background-color: #404bbf;
 }
 
-.checkbox{
-  border-radius: 2px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    fill: none;
-}
-
 .policy-container{
   display: flex;
   gap: 8px;
@@ -724,11 +729,6 @@ input {
   padding-top: 16px;
   padding-bottom: 24px;
   
-}
-
-.checkbox-container {
-  display: flex;
-  align-items: center;
 }
 
 .checkbox-input {
@@ -748,7 +748,7 @@ input {
 
 .checkbox-input:checked+.checkbox-custom {
   background-color: #4d5ae5;
- background-image: url(/images/Vector.svg);
+ background-image: url(/images/icons.svg#icon-tick);
  background-repeat: no-repeat;
  background-position: center;
 }
