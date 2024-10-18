@@ -526,6 +526,7 @@ textarea {
   background-color: #31d0aa;
 }
 
+
 .footer-form {
   display: flex;
   margin-left: 80px;
@@ -534,6 +535,7 @@ textarea {
 
 
 .footer-form-label {
+  margin-left: 80px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -582,7 +584,7 @@ textarea {
 
 .footer-form-button:focus,
 .footer-form-button:hover {
-  background-color: #404bbf;
+  background-color:#31d0aa;
 }
 
 
@@ -787,11 +789,9 @@ textarea {
   width: 16px;
   height: 16px;
   border-radius: 2px;
+  margin-right: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   cursor: pointer;
-  position: absolute;
-  left: -20px;
-  bottom: 1px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
