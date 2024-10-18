@@ -358,48 +358,6 @@
     </section>
   </main>
 
-  <div class="modal-overlay">
-    <div class="modal">
-      <form class="feedback">
-        <div class="close-button-container">
-          <button type="submit" class="close-button">
-            &times;
-          </button>
-        </div>
-        <fieldset class="feedback-container">
-          <legend class="feedback-title">
-            Leave your contacts and we will call you back
-          </legend>
-          <label class="feedback-subtitle">Name
-            <input class="feedback-input" type="text" />
-          </label>
-          <label class="feedback-subtitle">Phone
-            <input class="feedback-input" type="tel" />
-          </label>
-          <label class="feedback-subtitle">Email
-            <input class="feedback-input" type="email" />
-          </label>
-          <label class="feedback-subtitle">Comment
-            <textarea class="feedback-input textarea" placeholder="Text input" type="text"></textarea>
-          </label>
-          <div class="policy-container">
-            <div class="checkbox-container">
-              <label class="checkbox-label">
-                <input type="checkbox" class="checkbox-input" />
-                <span class="checkbox-custom"></span>
-              </label>
-            </div>
-            <p class="feedback-text">
-              I accept the terms and conditions of the Privacy Policy</a>
-            </p>
-          </div>
-          <button class="feedback-button" type="submit">Send</button>
-          <div class="close-button-container">
-        </fieldset>
-      </form>
-    </div>
-  </div>
-
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-main">
@@ -458,6 +416,72 @@
       </form>
     </div>
   </footer>
+
+<div class="modal-overlay is-open">
+    <div class="modal">
+      <form class="feedback">
+        <div class="close-button-container">
+          <button type="submit" class="close-button">
+            &times;
+          </button>
+        </div>
+        <fieldset class="feedback-container">
+          <legend class="feedback-title">
+            Leave your contacts and we will call you back
+          </legend>
+            <div class="input-wrap">
+              <label for="name" class="feedback-subtitle">Name
+                <div class="input-icon-container">
+                  <input id="name" class="feedback-input" type="text" />
+                  <svg class="input-icon" width="18" height="18">
+                    <use href="/images/icons.svg#icon-person"></use>
+                  </svg>
+                </div>
+              </label>
+            </div>
+          <div class="input-wrap">
+            <label for="phone" class="feedback-subtitle">Phone
+              <div class="input-icon-container">
+                <input id="phone" class="feedback-input" type="tel" />
+                <svg class="input-icon" width="18" height="18">
+                  <use href="/images/icons.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="input-wrap">
+            <label for="email" class="feedback-subtitle">Email
+              <div class="input-icon-container">
+                <input id="email" class="feedback-input" type="email" />
+                <svg class="input-icon" width="18" height="18">
+                  <use href="/images/icons.svg#icon-email"></use>
+                </svg>
+              </div>
+            </label>
+          </div>
+          <div class="input-wrap">
+            <label class="feedback-subtitle">Comment
+              <textarea class="textarea" placeholder="Text input" type="text"></textarea>
+            </label>
+          </div>
+          <div class="policy-container">
+            <div class="checkbox-container">
+              <input type="checkbox" class="checkbox-input" />
+              <label class="checkbox-label">
+                <span class="checkbox-custom"></span>
+              </label>
+            </div>
+            <p class="feedback-text">
+              I accept the terms and conditions of the Privacy Policy</a>
+            </p>
+          </div>
+          <button class="feedback-button" type="submit">Send</button>
+          <div class="close-button-container">
+        </fieldset>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>
