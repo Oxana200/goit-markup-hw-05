@@ -527,19 +527,20 @@ textarea {
 }
 
 .footer-form {
-  margin-left: 80px;
-}
-
-.footer-form-container {
   display: flex;
-  align-items: flex-end;
+  margin-left: 80px;
   gap: 24px;
 }
 
-.footer-form-label {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+
+.footer-form-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  
 }
 
 .footer-form-input {
@@ -548,25 +549,36 @@ textarea {
   width: 264px;
   height: 40px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background-color: inherit;
+  background-color: transparent;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  color: #ffffff;
 }
 
-.footer-form-input:focus,
-.footer-form-input:hover {
-  border: 1px solid #4d5ae5;
+.footer-form-input::placeholder {
+  color: #fff;
 }
 
 .footer-form-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
   gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
-  background: #4d5ae5;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  border: none;
 }
 
 .footer-form-button:focus,
@@ -574,16 +586,10 @@ textarea {
   background-color: #404bbf;
 }
 
-.footer-form-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  padding-left: 16px;
-  color: #fff;
-}
+
 
 .plane-icon {
+  margin-left: 16px;
   fill: #fff;
 }
 
@@ -796,9 +802,6 @@ textarea {
 .checkbox-input:checked + label .checkbox-custom {
   background-color: #404bbf;
   border: none;
-}
-
-.checkbox-input:checked + label .checkbox-custom svg {
   fill: #f4f4fd;
 }
 
