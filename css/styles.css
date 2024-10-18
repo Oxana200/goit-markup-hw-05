@@ -597,10 +597,9 @@ textarea {
   width: 100%;
   height: 100%;
   opacity: 0;
-  visibility: hidden;
+  visibility: hiddn;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -613,8 +612,9 @@ textarea {
   left: 50%;
   width: 408px;
   min-height: 584px;
+  padding: 72px 24px 24px 24px;
   transform: translate(-50%, -50%);
-  transition: trasform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
@@ -631,35 +631,40 @@ textarea {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background-color: #d0d0d0;
-  border: none;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 24px;
   color: black;
   cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 0;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
+  justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
 }
 
-.close-button:hover {
-  background-color: #4d5ae5;
-  color: white;
+.close-button:hover,
+.close-button:focus{
+  background-color: #404bbf;
+  border: none;
 }
 
-.feedback {
-  font-family: inherit;
+.close-button:focus .cross-icon,
+.close-button:hover .cross-icon{
+  fill: #ffffff
 }
+
+
 
 .feedback-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 24px;
-  padding-right: 24px;
+  
 }
 
 .feedback-title {
@@ -669,19 +674,17 @@ textarea {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
-  padding-bottom: 16px;
-  padding-top: 72px;
+  margin-bottom: 16px;
 }
 
 .feedback-subtitle {
-  display: flex;
-  flex-direction: column;
+  display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .feedback-input {
@@ -689,10 +692,17 @@ textarea {
   border-radius: 4px;
   width: 360px;
   min-height: 40px;
+  background-color: transparent;
   padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.feedback-input:hover {
+.input-wrap{
+  margin-bottom: 8px;
+}
+
+.feedback-input:focus {
   border-color: #4d5ae5;
 }
 
@@ -708,28 +718,29 @@ textarea {
 .input-icon {
   position: absolute;
   left: 16px;
-  top: 11px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .textarea {
-  min-height: 120px;
+  height: 120px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   width: 360px;
-}
-
-.textarea:hover {
-  border-color: #4d5ae5;
-}
-
-.textarea::placeholder {
-  padding-top: 8px;
-  padding-left: 16px;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .feedback-button {
@@ -761,8 +772,7 @@ textarea {
   display: flex;
   gap: 8px;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .checkbox-input {
@@ -770,32 +780,30 @@ textarea {
 }
 
 .checkbox-custom {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
   border-radius: 2px;
   border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
   cursor: pointer;
   position: relative;
   fill: transparent;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-input:checked + .checkbox-label > .checkbox-custom{
-  background-color: #4d5ae5;
-  background-image: url(/images/icons.svg#icon-tick);
-  background-repeat: no-repeat;
-  background-position: center;
+.checkbox-input:checked > .checkbox-custom{
+  background-color: #404bbf;
+  border: none;
+  fill:#F4F4FD;
 }
 
-.checkbox-custom:hover {
-  border-color: #4d5ae5;
-}
 
 .feedback-text {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
